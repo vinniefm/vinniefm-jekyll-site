@@ -1,0 +1,48 @@
+<header class="site-header">
+
+  <div class="wrapper">
+    <div class="collapse" id="exCollapsingNavbar">
+      <div class="bg-inverse p-a-1">
+            <ul class="nav nav-pills nav-stacked">
+            <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/">Home</a></li>
+              {% assign pages = site.pages | sort:"weight" %}
+              {% for p in pages %}
+                {% if p.title != null and p.title != 'vinniefm.com' and p.path contains 'index.' %}
+                  {% if page.url == p.url %}
+                    <li class="nav-item"><a class="nav-link active" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
+                    {% else %}
+                    <li class="nav-item"><a class="nav-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+      </div>
+    </div>
+    {% if page.title == "vinniefm.com" %}
+      <nav>
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </nav>
+      {% else %}
+      <nav class="navbar navbar-light bg-faded pull-xs-right">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+          &#9776;
+        </button>
+      </nav>
+      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <!-- </nav> -->
+    {% endif %}
+  </div>
+
+</header>
+{% if page.title == 'Product & UX Portfolio' %}
+    {% include jumbotron.html %}
+  {% endif %}
+
+<div class="container">
+
+
+<!-- Interesting look at liquid tag url parsing/navigation
+
+https://thinkshout.com/blog/2014/12/creating-dynamic-menus-in-jekyll/
+
+-->

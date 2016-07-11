@@ -1,0 +1,92 @@
+<article class="post">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title">{{ p.title }}</h1>
+  </header> -->
+
+<!--   <div class="post-content">
+  <div class="col-md-6 col-lg-4">
+<div class="card">
+  <img class="card-img-top" src="{{ p.meta.portfolio_hero }}" alt="Card image cap">
+  <div class="card-block"> -->
+  <div class="attributes">
+  <div class="attribute">
+    <div class="col-xs-6 type">
+      Platform(s)
+    </div>
+    <div class="col-xs-6 value">
+      {{ p.meta.platforms }}
+    </div>
+    </div>
+    <div class="attribute">
+    <div class="col-xs-6 type">
+      Project duration
+    </div>
+    <div class="col-xs-6 value">
+      {{ p.meta.start }} - {{ p.meta.end }}
+    </div>
+    </div>
+    <div class="attribute">
+    <div class="col-xs-6 type">
+      Deployment
+    </div>
+    <div class="col-xs-6 value">
+      {{ p.meta.current_state }}
+    </div>
+    </div>
+    <div class="attribute">
+    <div class="col-xs-6 type">
+      Client relationship
+    </div>
+    <div class="col-xs-6 value">
+      {{ p.meta.project_role }}
+    </div>
+    </div>
+    <div class="attribute">
+    <div class="col-xs-6 type">
+      Corporate website
+    </div>
+    <div class="col-xs-6 value">
+      <a href="{{ p.meta.product_url }}" target="_blank">{{ p.meta.product_url | remove: "http://"}}</a>
+    </div>
+    </div>
+    <div class="attribute">
+    <div class="col-xs-6 type">
+      iPhone
+    </div>
+    <div class="col-xs-6 value">
+      <a href="{{ p.meta.app_store_url_ios }}" target="_blank">App Store</a>
+    </div>
+    </div>
+    </div>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+</div>
+
+  </div> -->
+
+{{ p.body }}
+
+</article>
+
+
+
+
+<!-- 
+Product & UX Portfolio
+  - process presentation
+  - artifacts/
+    - portfolio-artifact-1
+      ... p.title
+      ... p.short_title = p.title | slice
+    - portfolio-artifact-n
+Blog
+  - blog entries by
+    - date
+    - category
+    - etc
+Bio
+
+ -->

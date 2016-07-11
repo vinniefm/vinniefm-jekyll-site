@@ -1,0 +1,35 @@
+.jumbotron {
+  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  margin-bottom: $jumbotron-padding;
+  background-color: $jumbotron-bg;
+  /*background-image: url(../portfolio/projects/portfolio-bg-jumbo.png);*/
+  @include border-radius($border-radius-lg);
+
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+  }
+}
+
+.jumbotron-hr {
+  border-top-color: darken($jumbotron-bg, 10%);
+}
+
+.portfolio-jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../portfolio/support-assets/sketches-cropped.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 2px 5px #333;
+   
+}
+
+
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
+}
+

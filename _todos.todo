@@ -1,0 +1,34 @@
+
+vinniefm.com tasks
+===================
+
+Content:
+ ☐ Hardcode Portfolio parent page variables on children #techdebt
+ ☐ Move old content to new dir structure (../old-source)
+ ☐ Build portfolio/{{ project.name }} pages / URLs
+ ☐ Pass parent page front matter variables to children (reuse content from parent)
+
+Navigation:
+ ☐ Fix Cars.com card, list projects on single card
+
+
+ Generic sub-nav solution (_includes/breadcrumb.html):
+   ☐ Add breadcrumbs to blog section (all sections)
+   ☐ Remove width = 100%; should be auto
+   ✔ Add font-awesome fa-arrow icon @done (16-07-08 10:00)
+   ✔ Determine parent.url @done (16-07-08 10:13)
+   ✔ Determine parent.title @done (16-07-08 10:13)
+
+App Integrations:
+ ☐ Verify GA tracking
+ ☐ Verify FB Pixel tracking
+ ☐ Verify Optimizely capability
+ ☐ Verify Google Tag Manager capability
+
+Visual:
+
+Maintenance:
+
+To read:
+  ☐ https://thinkshout.com/blog/2014/12/creating-dynamic-menus-in-jekyll/
+  ^ Good stuff on URL parsing with liquid

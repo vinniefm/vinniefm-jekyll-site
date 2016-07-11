@@ -1,0 +1,27 @@
+---
+layout: portfolio_project
+title: "{{ title }}"
+created: {{ date }}
+draft: true
+
+meta:
+  platforms:
+  start:
+  end:
+  current_state:
+  project_role:
+  product_url:
+  app_store_url_ios: 
+  app_store_url_play: 
+
+  short_description: "What's it do..." 
+
+  long_description:
+
+  portfolio_hero: "../../assets/images/portfolio/logos/xyz.png"
+  image_path: 
+---
+
+{% assign body = 
+"{{ page.short_description }} and it does this and that too. It also does this other thing that's pretty cool too."
+%}

@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Fitbit"
+date: 2014-02-07 19:37:26 -0600
+published: true
+comments: true
+categories: 
+- Misc
+---
+
+Got a Fitbit yesterday for my birthday. Should be interesting to see what sort of data and insight it provides. Even more importantly, motivation. To that end, I also signed up with <a href="http://www.fitbolt.com">Fitbolt.com</a>. It’s funny that to work in the UX field, even having a pretty decent ergonomic chair, we kill ourselves by sitting for 8 hours at a stretch.
+
+The 2014 plan is to close all email apps and possibly instant messenger at the top of each hour and focus on the task list. At 55 minutes in, check emails on my phone while walking around the office for 5 minutes. If an email needs to be replied to, that’s a task for the next hour whilst sitting at a full keyboard, or it’s a face-to-face discussion during the walk around. Rinse and repeat at the top of each hour.
+

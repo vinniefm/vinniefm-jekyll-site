@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- <ol class="breadcrumb">
+  <li><a href="{{ site.baseurl }}/">home</a></li>
+  <li><a href="{{ site.baseurl }}/blog">blog</a></li>
+</ol> -->
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>
+
+<!-- 
+TODO:
+[ ] Restyle and implement .breadcrumb
+ -->

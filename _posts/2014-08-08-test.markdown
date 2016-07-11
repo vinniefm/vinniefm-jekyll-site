@@ -1,0 +1,9 @@
+---
+layout: post
+title: "test"
+date: 2014-08-08 14:53:23 -0500
+published: false
+comments: true
+categories: 
+---
+This is a test because source got unset again. Ack!

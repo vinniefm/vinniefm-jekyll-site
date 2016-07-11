@@ -1,0 +1,18 @@
+---
+layout: post
+title: "progress"
+date: 2014-07-18 01:35:48 -0500
+published: true
+comments: true
+categories: 
+---
+Well, it's obviously been slow going as evidenced by the lack of
+commitment on display with nothing said since February. Having a kid
+will do that I guess. I've also had the pleasure recently of spending
+more time with my 12 year old daughter. We've been working through the
+HTML/CSS Code Academy class, which has been a lot of fun!
+
+I am also happy to report that significant progress has been made
+towards posting some portfolio work along with local HTML and PDF
+versions of my resume. Links coming soon.
+

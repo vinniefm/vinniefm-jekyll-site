@@ -1,0 +1,41 @@
+---
+layout: portfolio_project
+
+navigation:
+  parent: "/portfolio/"
+  parent-title: "Product & UX Portfolio"
+
+title: "Paydunk - {{ page.parent-title }} - {{ site.owner }} "
+short_title: "Paydunk"
+created: 2
+draft: true
+
+meta:
+  platforms: "iOS"
+  weight: 1
+  start: "02/2015"
+  end: "05/2015"
+  current_state: "Production beta"
+  project_role: "Agency - UX Designer"
+  product_url: "http://paydunk.com"
+  
+  app_store_url_ios: 
+  app_store_url_play: 
+
+  short_description: "Paydunk does..." 
+
+  long_description:
+
+  portfolio_hero: "../../assets/images/portfolio/logos/paydunk-logo.png"
+  image_path: 
+
+---
+
+{% assign body = 
+"{{ page.short_description }} and it does this and that too. It also does this other thing that's pretty cool too."
+%}
+
+
+{% include portfolio-card.html %}
+
+{{ page.short_description }} and it does this and that too.
