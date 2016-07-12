@@ -1,0 +1,23 @@
+.project-container {
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  border: 1px solid red;
+}
+.project-body {
+  display: flex;
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+  justify-content: center;
+  border: 1px dashed green;
+}
+.project-body .body {
+  border: 1px dashed green;
+}
+.project-body .meta {
+  border: 2px dashed blue;
+}
+
+/** {
+  border: 1px solid red;
+}*/
