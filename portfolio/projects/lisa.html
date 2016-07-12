@@ -5,7 +5,8 @@ short_title: "LISA App"
 created: 1 
 
 meta:
-  platforms: "Android, iOS, nodejs"
+  platforms: "Android, iOS, Node.js"
+  apis: "Stripe.com, Localytics, Instabug, Instagram "
   weight: 1
   start: "02/2015"
   end: "present"
@@ -16,6 +17,7 @@ meta:
   app_store_url_ios: "https://itunes.apple.com/us/app/lisa-look-feel-good-on-your/id1053357848?mt=8"
   app_store_url_play: "https://play.google.com/store/apps/details?id=com.lisaapp.app&hl=en"
 
+  
   short_description: "LISA App is an open platform solving problems experienced by beauty and wellness providers, as well as consumers seeking out those services." 
 
   long_description:
@@ -26,9 +28,81 @@ meta:
 navigation:
   parent: "/portfolio/"
   parent-title: "Product & UX Portfolio"
+
+body:
+  
+  problem: > Highly fractured with the top 50 players accounting for only 15% market share out of $65 billion in annual gross revenues, the beauty industry is as large as it is ripe for disruption. With over 20 years of front-line experience in salons, the founding team
+
+  solution:
 ---
 
+<div class="project-container">
+  <div class="hero">
+    <img src="{{ page.meta.portfolio_hero }}" alt="{{ page.short_title }} logo" />
+  </div>
+  <div class="project">
+    <div class="description"> 
+      <h2>Project Description</h2>
+      <h3>Problem</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+      <h3>Process</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+      <h3>Solutions</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+    </div>
+    <div class="meta">
+      <h2>Meta</h2>
+      <div class="meta-table">
+        <div class="table-row">
+            <div class="column"><strong>Role:</strong></div>
+            <div class="column">{{ page.meta.project_role }}</div>
+        </div>
+        <div class="table-row">
+            <div class="column"><strong>Platforms:</strong></div>
+            <div class="column">{{ page.meta.platforms }}</div>
+        </div>
+        <div class="table-row">
+            <div class="column"><strong>APIs:</strong></div>
+            <div class="column" style="white-space: normal;">{{ page.meta.apis }}</div>
+        </div>
+        <div class="table-row">
+            <div class="column"><strong>Duration:</strong></div>
+            <div class="column">{{ page.meta.start }} - {{ page.meta.end }}</div>
+        </div>
+        <div class="table-row">
+            <div class="column"><strong>Web:</strong></div>
+            <div class="column"><a href="page.meta.product_url">{{ page.meta.product_url | remove: "http://" }}</a></div>
+        </div>
+        {% if page.meta.app_store_url_ios %}
+        <div class="table-row">
+            <div class="column"><strong>iTunes:</strong></div>
+            <div class="column"><a href="page.meta.app_store_url_ios">App Store</a></div>
+        </div>
+        {% endif %}
+        {% if page.meta.app_store_url_play %}
+        <div class="table-row">
+            <div class="column"><strong>Google:</strong></div>
+            <div class="column"><a href="page.meta.app_store_url_play">Android Play</a></div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 
+</div>
 
-
-{% include portfolio-card.html %}

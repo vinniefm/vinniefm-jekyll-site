@@ -1,0 +1,63 @@
+.project-container {
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+}
+.project-container .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.project-container .hero img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.project {
+  display: flex;
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.project > div {
+  padding-top: 1rem;
+}
+.project h2 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.description {
+  padding-right: 1rem;
+}
+.meta {
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  flex-wrap: nowrap;
+  font-size: .75rem;
+  background-color: #e0e0e0;
+  padding: 0 .75rem;
+  height: 100%;
+  padding-bottom: 1.5rem;
+  border-radius: 6px;
+}
+.meta-table {
+  display: table;
+}
+.meta-table .table-row {
+  display: table-row;
+  width: 100%;
+}
+.column {
+  display: table-cell;
+  white-space: nowrap;
+  vertical-align: top;
+  padding: 0.25rem 0.5rem;
+  border-bottom: .01rem solid #a0a0a0;
+}
+.btn-primary:visited {
+  color: #f8f8f8;
+}

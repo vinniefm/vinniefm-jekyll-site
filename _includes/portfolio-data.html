@@ -11,63 +11,62 @@
   <div class="card-block"> -->
   <div class="attributes">
   <div class="attribute">
-    <div class="col-xs-6 type">
+    <div class="type">
       Platform(s)
     </div>
-    <div class="col-xs-6 value">
+    <div class="value">
       {{ p.meta.platforms }}
     </div>
     </div>
     <div class="attribute">
-    <div class="col-xs-6 type">
+    <div class="type">
       Project duration
     </div>
-    <div class="col-xs-6 value">
+    <div class="value">
       {{ p.meta.start }} - {{ p.meta.end }}
     </div>
     </div>
     <div class="attribute">
-    <div class="col-xs-6 type">
+    <div class="type">
       Deployment
     </div>
-    <div class="col-xs-6 value">
+    <div class="value">
       {{ p.meta.current_state }}
     </div>
     </div>
     <div class="attribute">
-    <div class="col-xs-6 type">
+    <div class="type">
       Client relationship
     </div>
-    <div class="col-xs-6 value">
+    <div class="value">
       {{ p.meta.project_role }}
     </div>
     </div>
     <div class="attribute">
-    <div class="col-xs-6 type">
+    <div class="type">
       Corporate website
     </div>
-    <div class="col-xs-6 value">
+    <div class="value">
       <a href="{{ p.meta.product_url }}" target="_blank">{{ p.meta.product_url | remove: "http://"}}</a>
     </div>
     </div>
     <div class="attribute">
-    <div class="col-xs-6 type">
+    <div class="type">
       iPhone
     </div>
-    <div class="col-xs-6 value">
+    <div class="value">
       <a href="{{ p.meta.app_store_url_ios }}" target="_blank">App Store</a>
     </div>
     </div>
     </div>
-    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Button</a>
-  </div>
+    <p class="card-text"></p>
+    <a href="{{ p.url }}" class="btn btn-primary">Read more</a>
+  <!-- </div>
 </div>
 </div>
 
   </div> -->
 
-{{ p.body }}
 
 </article>
 
