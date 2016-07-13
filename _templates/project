@@ -19,7 +19,7 @@ meta:
   long_description:
 
   portfolio_hero: "../../assets/images/portfolio/logos/xyz.png"
-  image_path: 
+  carousel_path: 
 ---
 
 {% assign body = 

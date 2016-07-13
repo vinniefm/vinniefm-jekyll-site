@@ -22,87 +22,48 @@ meta:
 
   long_description:
 
-  portfolio_hero: "../../assets/images/portfolio/logos/lisa-logo.png"
-  image_path: 
+ 
 
 navigation:
   parent: "/portfolio/"
   parent-title: "Product & UX Portfolio"
 
+images:
+  portfolio_hero: "../../assets/images/portfolio/logos/lisa-logo.png"
+  carousel_path:
+
 body:
   
-  problem: > Highly fractured with the top 50 players accounting for only 15% market share out of $65 billion in annual gross revenues, the beauty industry is as large as it is ripe for disruption. With over 20 years of front-line experience in salons, the founding team
+  problem: 
+    "When analyzing various business metrics of the beauty and wellness industry, it quickly becomes obvious that it is broken. This is particularly apparent when looking at the consumer/service provider relationship. Conservative estimates suggest annual revenue of $60+ billion on haircuts and massage alone. Yet, two problems exist...
 
-  solution:
+    <h4>Market share</h4>
+
+    Shockingly, the top 50 players control a mere 15% of the annual revenue.
+
+    <h4>Service provider income</h4>
+
+    While service providers own the loyalty in the consumer relationship, they typically leave 60% or more of their transaction revenue to the salon or spa. This results in full time employment achieving approximately a $23,000/year income. That's not far from the poverty line."
+
+  process: 
+    ""
+
+  solution: 
+    ""
 ---
 
-<div class="project-container">
-  <div class="hero">
-    <img src="{{ page.meta.portfolio_hero }}" alt="{{ page.short_title }} logo" />
-  </div>
-  <div class="project">
-    <div class="description"> 
-      <h2>Project Description</h2>
-      <h3>Problem</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-      <h3>Process</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-      <h3>Solutions</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-    </div>
-    <div class="meta">
-      <h2>Meta</h2>
-      <div class="meta-table">
-        <div class="table-row">
-            <div class="column"><strong>Role:</strong></div>
-            <div class="column">{{ page.meta.project_role }}</div>
-        </div>
-        <div class="table-row">
-            <div class="column"><strong>Platforms:</strong></div>
-            <div class="column">{{ page.meta.platforms }}</div>
-        </div>
-        <div class="table-row">
-            <div class="column"><strong>APIs:</strong></div>
-            <div class="column" style="white-space: normal;">{{ page.meta.apis }}</div>
-        </div>
-        <div class="table-row">
-            <div class="column"><strong>Duration:</strong></div>
-            <div class="column">{{ page.meta.start }} - {{ page.meta.end }}</div>
-        </div>
-        <div class="table-row">
-            <div class="column"><strong>Web:</strong></div>
-            <div class="column"><a href="page.meta.product_url">{{ page.meta.product_url | remove: "http://" }}</a></div>
-        </div>
-        {% if page.meta.app_store_url_ios %}
-        <div class="table-row">
-            <div class="column"><strong>iTunes:</strong></div>
-            <div class="column"><a href="page.meta.app_store_url_ios">App Store</a></div>
-        </div>
-        {% endif %}
-        {% if page.meta.app_store_url_play %}
-        <div class="table-row">
-            <div class="column"><strong>Google:</strong></div>
-            <div class="column"><a href="page.meta.app_store_url_play">Android Play</a></div>
-        </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
+{% include project-container.html %}
 
-</div>
 
+<!-- 
+  US households:                    116 million
+  Average haircuts/household/year:  8
+  Average haircut cost:             $40
+  Households w/massage multiplier:  .25
+  Massages/year:                    12
+  Average massage cost:             80
+  - - - - - - - - - - - - - - - - - - - - - - - - -
+  Total revenue:                    $64,960,000,000
+
+  (116000000*8*40)+((116000000*.25)*12*80) 
+-->

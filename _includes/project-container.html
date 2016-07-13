@@ -1,0 +1,57 @@
+<div class="project-container">
+  <div class="hero">
+    <img src="{{ page.images.portfolio_hero }}" alt="{{ page.short_title }} logo" />
+  </div>
+  <div class="project">
+    <div class="description"> 
+      <h2>Project Description</h2>
+      <p>{{ page.body.intro }}</p>
+      <h3>Problems</h3>
+      <p>{{ page.body.problem | markdownify }}</p> 
+      <h3>Process</h3>
+      <p>{{ page.body.process }}</p> 
+      <h3>Solutions</h3>
+      <p>{{ page.body.solution }}</p> 
+    </div>
+    <div class="meta">
+      <h2>Meta</h2>
+      <div class="meta-table">
+        <div class="table-row">
+            <div class="column"><strong>Role:</strong></div>
+            <div class="column">{{ page.meta.project_role }}</div>
+        </div>
+        <div class="table-row">
+            <div class="column"><strong>Platforms:</strong></div>
+            <div class="column">{{ page.meta.platforms }}</div>
+        </div>
+        {% if page.meta.apis %}
+        <div class="table-row">
+            <div class="column"><strong>APIs:</strong></div>
+            <div class="column wrap-ok">{{ page.meta.apis }}</div>
+        </div>
+        {% endif %}
+        <div class="table-row">
+            <div class="column"><strong>Duration:</strong></div>
+            <div class="column">{{ page.meta.start }} - {{ page.meta.end }}</div>
+        </div>
+        <div class="table-row">
+            <div class="column"><strong>Web:</strong></div>
+            <div class="column"><a target="_blank" href="{{ page.meta.product_url }}">{{ page.meta.product_url | remove: "http://" }}</a></div>
+        </div>
+        {% if page.meta.app_store_url_ios %}
+        <div class="table-row">
+            <div class="column"><strong>iTunes:</strong></div>
+            <div class="column"><a target="_blank" href="{{ page.meta.app_store_url_ios }}">App Store</a></div>
+        </div>
+        {% endif %}
+        {% if page.meta.app_store_url_play %}
+        <div class="table-row">
+            <div class="column"><strong>Google:</strong></div>
+            <div class="column"><a target="_blank" href="{{ page.meta.app_store_url_play }}">Android Play</a></div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
