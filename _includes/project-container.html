@@ -10,16 +10,13 @@
         {% for s in slides %}
           {% if s[0] == 0 %}
             <div class="carousel-item active">
-            <p>{{ s[1] }}</p>
-            <img src="{{ s[1] }}" alt="{{ i }} slide">
+              <img src="{{ s[1] }}" alt="{{ i }} slide">
           {% elsif s[0] == 1 %}
             <div class="carousel-item">
-            <p>{{ s[1] }}</p>
-            <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
+             <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
           {% elsif s[0] == 2 %}
             <div class="carousel-item">
-            <p>{{ s[1] }}</p>
-            <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
+              <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
           {% endif %}
             </div>
         {% endfor %}
