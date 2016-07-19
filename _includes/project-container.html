@@ -11,12 +11,11 @@
           {% if s[0] == 0 %}
             <div class="carousel-item active">
               <img src="{{ s[1] }}" alt="{{ i }} slide">
-          {% elsif s[0] == 1 %}
+          {% elsif s[0] > 0 %}
             <div class="carousel-item">
              <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
-          {% elsif s[0] == 2 %}
-            <div class="carousel-item">
-              <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
+           {% else %}
+            <p>Uh oh... This is embarrassing.</p>
           {% endif %}
             </div>
         {% endfor %}
