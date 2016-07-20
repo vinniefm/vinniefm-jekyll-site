@@ -1,12 +1,13 @@
+{% assign slides = page.images.carousel %}
+
 <div class="project-container">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="carousel-example-generic" data-slide-to="2"></li>
+        {% for s in slides %}
+          <li data-target="carousel-example-generic" data-slide-to="{{ s[0] }}" {% if s[0] == 0 %}class="active" {% endif %}></li>
+        {% endfor %}
       </ol>
       <div class="carousel-inner" role="listbox">
-        {% assign slides = page.images.carousel %}
         {% for s in slides %}
             <div class="carousel-item {% if s[0] == 0 %}active{% endif %}">
               <img src="{{ s[1] }}">
