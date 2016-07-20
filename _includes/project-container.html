@@ -8,16 +8,8 @@
       <div class="carousel-inner" role="listbox">
         {% assign slides = page.images.carousel %}
         {% for s in slides %}
-          {% if s[0] == 0 %}
-            <div class="carousel-item active">
-              <img src="{{ s[1] }}" alt="{{ i }} slide">
-          {% elsif s[0] == 1 %}
-            <div class="carousel-item">
-             <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
-          {% elsif s[0] == 2 %}
-            <div class="carousel-item">
-              <img src="{{ s[1] }}" alt="{{ i + 1 }} slide">
-          {% endif %}
+            <div class="carousel-item {% if s[0] == 0 %}active{% endif %}">
+              <img src="{{ s[1] }}">
             </div>
         {% endfor %}
       </div>
