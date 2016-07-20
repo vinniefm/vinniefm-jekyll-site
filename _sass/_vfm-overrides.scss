@@ -1,3 +1,8 @@
+.portfolio-jumbotron h1, .portfolio-jumbotron p {
+  display: inline-block;
+  background-color: rgba(0,0,0,.5);
+  padding: 1rem;
+} 
 .project-container {
   display: flex;
   -webkit-flex-direction: column; /* Safari */
@@ -37,7 +42,7 @@
   -webkit-flex-direction: column; /* Safari */
   flex-direction:         column;
   flex-wrap: nowrap;
-  font-size: .75rem;
+  font-size: $font-size-xs; /*.75rem;*/
   background-color: #e0e0e0;
   padding: 0 .75rem;
   height: 100%;
@@ -57,6 +62,9 @@
   vertical-align: top;
   padding: 0.25rem 0.5rem;
   border-bottom: .01rem solid #a0a0a0;
+}
+.column.wrap-ok {
+  white-space: normal;
 }
 .btn-primary:visited {
   color: #f8f8f8;

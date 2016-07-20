@@ -4,6 +4,10 @@ title: "Cars.com: Dealer Center - Product & UX Portfolio - vinniefm.com"
 short_title: "Cars.com: Dealer Center"
 created: 5
 
+navigation:
+  parent: "/portfolio/"
+  parent-title: "Product & UX Portfolio"
+
 meta: 
   platforms: "Desktop/responsive web"
   weight: 3
@@ -19,12 +23,60 @@ meta:
   
   long_description:
 
+images: 
   portfolio_hero: "../../assets/images/portfolio/logos/cars-logo.png"
-  image_path:
+  carousel_base_path: "{{ site.base_url }}/assets/images/portfolio/project-screens"
+  
+  carousel:
+      0: ../../assets/images/portfolio/project-screens/cars-dealer-center/1-cir-pricing-charts-closed.png
+      1: ../../assets/images/portfolio/project-screens/cars-dealer-center/2-cir-pricing-charts-open.png
+      2: ../../assets/images/portfolio/project-screens/cars-dealer-center/3-cir-report-data.png
+  
+body:
+  
+  intro:
+    The Cars.com Dealer Center mission is to report on the value generated for dealers by their relationship with Cars.com. Used by both internal sales and operations representatives as well as dealer users, the Dealer Center interface exhibited a number of problems and anti-patterns when I was tasked with redesigning the application in 2011.
 
-navigation:
-  parent: "/portfolio/"
-  parent-title: "Product & UX Portfolio"
+  problem: 
+    Car dealers and those that consult dealers on inventory quality and advertising effectiveness use a few dimensions to analyze their data. The existing web app did not support easy analysis and good decision making in its users.
+    
+    <h4>Inventory age</h4>
+    <p>Inventory incurs cost as it ages on the lot. Most dealers have aging policies that are enforced with varying degrees of discipline. Dealers typically perform better with greater transparency on the current age of all inventory.</p>
+    
+    <h4>Price quality by age</h4>
+    <p>Prior to the data explosion of the Internet and the generally ill-informed consumer, dealers often set list prices using a &#8220;cost-plus&#8221; formula. Savvy dealers today understand that they&#8217;re dealing with a savvy consumer and that value based on features, not arbitrary costs drive price. By comparing inventory units based on key attributes (Model Year, Make, Model, Milage, features, etc) to all other similar inventory units listed at other dealers in the market, dealers are able to price and move inventory in competitive fashion.</p>
+
+    <h4>Inventory photo and video quality</h4>
+    <p>Pre-Internet, a dealer would never allow a vehicle to sit on the lot that wasn&#8217;t spotless. Yet, at the dawn of listing vehicles online, many were listed with only a few poor quality photos or worse, no photos at all. Survey after survey indicates that the presence and quality of photos are critical to consumers during the online shopping experience. The Dealer Center allows the user to quickly find vehicles with poor visual representation.</p>
+
+    <h4>Description quality</h4>
+    <p>A price and a picture can only tell so much however and they do little to drive SEO traffic to a specific piece of inventory. The Dealer Center enables the user to find inventory with poor quality descriptions. Future roadmap features were planned to assist the user in writing better descriptions based on known data about the unit.</p>
+
+  process: 
+    One of the Cars.com innovations was to start investing in UX research, distinct interaction design tasks, and other standard components of "UX" in the early 2000's. That said, this project commenced in 2010 while the company continued to rely on their trusted but inefficient waterfall process. 
+
+  solution: 
+    <p>As illustrated the above slideshow, the solution involved incorporating charting capabilities along with a redesigned data table using colors and symbols to make value judgements where appropriate.</p>
+
+    <h4>Better story telling & Charting</h4>
+    <p>By combining a chart depicting inventory units grouped into a dealer&#8217;s aging policy buckets, users are immediately presented with a visual indicator of inventory health at the dealership.</p>
+    <p>We then went further and stacked additional information on each bar to tell the story about quality along the key dimensions of Price, Photos, Video, and Notes.</p>
+
+    <h4>Interaction Design and Filtering</h4>
+    <p>The implementation of the aging inventory bar chart presented the opportunity to drill into each section of the chart and, in turn, filter the inventory report below.</p>
+    <p>While there was no mandate for mobile optimization, we were able to insure that the chart was touch-friendly and worked very well on tablets and minimally on smaller screen phones.</p>
+
+    <h4>Rich visual report cues</h4>
+    <p>Data grids are often a necessary evil in a SaaS environment. The user really does need all of that data. Thus, our focus with the data grid, in combination with the previously mentioned filters, was to make the grid as scanable as possible. By adding colors and symbols to qualitatively report on inventory health, the user was able to quickly see problem units.</p>
+    <p>Our initial visual design used a red and green color palette to report qualitatively on health. A fairly obvious (and clichéd!) solution. The team quickly determined that this palette produced an undesirable &#8220;Christmas tree&#8221; look and thus opted for a more subtle visual vocabulary. Testing proved that the desired message was understood by users and behaviors changed accordingly.</p>
+
+    <h4>Updated Navigation Visual Design</h4>
+    <p>What once took up 160px of vertical space on the page dominated by a logo to large and meaningless graphic design flourish was shrunk to a svelt ~40px thus providing more room to get actual work done.</p>
+
+    <h4>Additional Features</h4>
+    <p>Everything discussed thus far has been towards improving the user experience when managing the tactically important <em>present</em>, but what about the equally important strategy to the future?</p>
+    <p>To that end, we wanted to answer the user&#8217;s question, &#8220;what is the value of performing these activities - take photos, price competitively, write descriptions, etc? The charts at right begin to answer that by rendering two KPIs over the recent past that are important to the dealer:</p>
+    <p>This was very much an MVP release. We knew through testing that the charts were valuable but design and discovery efforts are still needed to determine what interesting workflows might find their genesis in this data. A potential issue to watch for in future research sessions is whether the rendering of these charts invites the user to compare and correlate where there is no correlation to be made. </p>
 ---
 
-{% include portfolio-card.html %}
+{% include project-container.html %}

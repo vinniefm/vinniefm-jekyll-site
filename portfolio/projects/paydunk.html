@@ -27,8 +27,19 @@ meta:
   long_description:
 
   portfolio_hero: "../../assets/images/portfolio/logos/paydunk-logo.png"
-  image_path: 
+  carousel_path: 
 
+navigation:
+  parent: "/portfolio/"
+  parent-title: "Product & UX Portfolio"
+  
+body:
+  
+  problem: Highly fractured with the top 50 players accounting for only 15% market share out of $65 billion in annual gross revenues, the beauty industry is as large as it is ripe for disruption. With over 20 years of front-line experience in salons, the founding team
+
+  process: Some process stuff...
+
+  solution: Some solution stuff...
 ---
 
 {% assign body = 
@@ -36,6 +47,6 @@ meta:
 %}
 
 
-{% include portfolio-card.html %}
+{% include project-container.html %}
 
 {{ page.short_description }} and it does this and that too.
