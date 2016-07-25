@@ -1,0 +1,47 @@
+---
+layout: default
+title: "vinniefm.com"
+weight: 0
+---
+<style>.btn-group-wrap {
+  text-align: center;
+}
+
+div.btn-group {
+  margin: 0 auto; 
+  text-align: center;
+  width: inherit;
+  display: inline-block;
+}
+
+</style>
+
+<div class="home">
+  <div class="list-group">
+    {% assign pages = site.pages | sort:"weight" %}
+    {% for p in pages %}
+      {% if p.title != null and p.title != 'vinniefm.com' and p.path contains 'index.' %}
+        <a href="{{ p.url }} " class="list-group-item">
+          <h4 class="list-group-item-heading">{{ p.title }}</h4>
+        </a>
+      {% endif %}
+    {% endfor %}
+    <li class="list-group-item">
+      <div class="btn-group-wrap">
+       <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" type="button" class="btn btn-secondary"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i> <!-- Linkedin --></a>
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" type="button" class="btn btn-secondary"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i> <!-- Twitter --></a>
+        <a href="mailto:vmease@gmail.com" type="button" class="btn btn-secondary"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i> <!-- Email --></a>
+
+      </div>
+    </div>
+  </li>
+</div>
+</div>
+
+
+<!-- [source](https://github.com/dogweather/railsdocs.org/blob/gh-pages/{{page.url | replace:'.html','.md'}})
+ -->
+
+
+

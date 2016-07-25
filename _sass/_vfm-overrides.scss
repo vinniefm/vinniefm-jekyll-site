@@ -1,3 +1,9 @@
+.flex {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
 .portfolio-jumbotron h1, .portfolio-jumbotron p {
   display: inline-block;
   background-color: rgba(0,0,0,.5);
