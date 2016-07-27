@@ -75,3 +75,16 @@
 .btn-primary:visited {
   color: #f8f8f8;
 }
+
+.resume ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+.resume ul li {
+  display: inline;
+  padding-left: 10px;
+  float: left;
+}

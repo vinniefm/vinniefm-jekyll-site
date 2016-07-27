@@ -17,6 +17,8 @@ twitter_username: vinniefm
 github_username:  vinniefm
 linkedin_username: vincemease
 
+port: 4444
+
 # Build settings
 markdown: kramdown
 # sass:
