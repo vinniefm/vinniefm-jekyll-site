@@ -3,7 +3,10 @@
   min-height: 100%;
   flex-direction: column;
 }
-
+.copyright {
+  font-size: .75rem;
+  color: $gray-light;
+}
 .portfolio-jumbotron h1, .portfolio-jumbotron p {
   display: inline-block;
   background-color: rgba(0,0,0,.5);
@@ -78,12 +81,15 @@
 
 /* Start Resume page overrides */
 .resume ul.contacts {
-  display: block;
-  margin: 0 0 1rem 0;
-  padding: 0 0 .5rem 0;
-  list-style-type: none;
-  text-align: left;
-  border-bottom: 5px solid #b0b0b0;
+    display: block;
+    margin: 0 0 1rem 0;
+    padding: .5rem 0 .5rem 0;
+    list-style-type: none;
+    text-align: left;
+    border-bottom: 5px solid #b0b0b0;
+    border-top: 5px solid #b0b0b0;
+    font-size: .9rem;
+    text-align: cetner;
 }
 .resume ul.contacts li {
   display: inline;
