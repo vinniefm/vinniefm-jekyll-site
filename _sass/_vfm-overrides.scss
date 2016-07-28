@@ -112,4 +112,20 @@
 .resume .job-description {
   margin: 1rem 0 0 1rem;
 }
+.core-competencies {
+  display: flex;
+  flex-direction: column;
+}
+.core-competencies ul:last-of-type {
+  margin-top: -15px;
+}
+@media (min-width: 768px) {
+ .core-competencies {
+  display: flex;
+  flex-direction: row;
+  }
+  .core-competencies ul:last-of-type {
+  margin-top: 0;
+  }
+}
 /* End Resume page overrides */

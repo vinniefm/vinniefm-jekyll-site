@@ -20,7 +20,7 @@ div.btn-group {
   <div class="list-group">
     {% assign pages = site.pages | sort:"weight" %}
     {% for p in pages %}
-      {% if p.title != null and p.title != 'vinniefm.com' and p.path contains 'index.' %}
+      {% if p.title != null and p.title != 'vinniefm.com' and p.path contains 'index.' and p.draft != true %}
         <a href="{{ p.url }} " class="list-group-item">
           <h4 class="list-group-item-heading">{{ p.title }}</h4>
         </a>
@@ -38,10 +38,3 @@ div.btn-group {
   </li>
 </div>
 </div>
-
-
-<!-- [source](https://github.com/dogweather/railsdocs.org/blob/gh-pages/{{page.url | replace:'.html','.md'}})
- -->
-
-
-
