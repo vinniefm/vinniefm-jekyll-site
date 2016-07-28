@@ -76,15 +76,40 @@
   color: #f8f8f8;
 }
 
-.resume ul {
+/* Start Resume page overrides */
+.resume ul.contacts {
   display: block;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 1rem 0;
+  padding: 0 0 .5rem 0;
   list-style-type: none;
   text-align: left;
+  border-bottom: 5px solid #b0b0b0;
 }
-.resume ul li {
+.resume ul.contacts li {
   display: inline;
-  padding-left: 10px;
+}
+.resume ul.contacts li:first-child {
+  display: inline;
+  padding-left: 0;
   float: left;
 }
+.resume ul.contacts li + li:before {
+  content: '| ';
+  padding-left: .5rem;
+}
+.resume .tenure {
+  float: right;
+  margin-top: -53px;
+}
+.resume .tenure.certification {
+  float: right;
+  margin-top: -30px;
+}
+.resume .location {
+  float: right;
+  margin-top: -24px;
+}
+.resume .job-description {
+  margin: 1rem 0 0 1rem;
+}
+/* End Resume page overrides */

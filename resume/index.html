@@ -6,10 +6,10 @@
     "contact":
         "name": "Vince Mease"
         "contact":
-            "phone": "312-480-0720"
-            "email": "vmease@gmail.com"
-            "linkedin": "<a href=\"http://linkedin.com/in/vincemease\" target=\"_blank\">Linkedin Profile</a>"
-            "location": "Louisville, KY"
+            "phone": "<a href=\"tel:+13124800720\">312-480-0720</a>"
+            "email": "<a href=\"mailto:vmease@gmail.com\">vmease@gmail.com</a>"
+            "linkedin": "<a href=\"http://linkedin.com/in/vincemease\" target=\"_blank\">Linkedin</a>"
+            # "location": "Louisville, KY"
 
     "Summary": 
         "<p>Multifaceted, resourceful UX Architect, Product Owner (CSPO), and project leader with over 10 years experience specifying and designing highly useful and usable web and mobile applications across diverse knowledge domains and industries. Recognized innovator with proven ability to identify, analyze, and solve problems to increase operational efficiency and implement process change. Consistently build solid relationships across all organizational levels and spearhead multi-disciplinary teams to design, re-design, and launch cutting-edge applications with success measured in increased profit and reduced cost for the company and its clients.</p>"
@@ -77,7 +77,8 @@
 
     "Certifications":
         "ScrumAlliance":
-            "body": "<p>Certified Scrum Product Owner (08/2013)</p>"
+            "tenure": "08/2013"
+            "body": "<p>Certified Scrum Product Owner</p>"
 
     "Education":
         "University of Louisville":
@@ -95,34 +96,50 @@
                 <h2>{{ l[1] }}</h2> <!-- name -->
             {% else %}
                 {% assign veins = l[1] %}
+                <ul class="contacts">
                 {% for v in veins %}
-                    <ul>
-                        <li>{{ v[1] | join: '| ' }}</li> <!-- contact methods-->
-                    </ul>
+                    <li>{{ v[1] }}</li>
                 {% endfor %}
-                <hr style="display: block;">
+                <!-- ^^ Contact methods -->
+                </ul>
             {% endif %}
         {% endfor %}
     {% else %}
-        <h3>{{ n[0] }}</h3> <!-- sections -->
+      {% if n[0] == 'Summary' %}
+        <h3>{{ n[0] }}</h3>
+        <p>{{ n[1] }}</p> <!-- sections -->
+      {% elsif n[0] != 'Summary' %}
+        <h3>{{ n[0] }}</h3>
         {% for l in leafs %}
-        {% assign veins = l[1] %}
-        <h4>{{ l[0] }}</h4> <!-- Employer -->
-            {% for v in veins %}
-                {% if v[0] == 'title' %}
-                    <div class="title">{{ v[1] }}</div>
-                {% endif %}
-                {% if v[0] == 'tenure' %}
-                    <div class="tenure">{{ v[1] }}</div>
-                {% endif %}
-                {% if v[0] == 'location' %}
-                    <div class="location">{{ v[1] }}</div>
-                {% endif %}
-                {% if v[0] == 'body' %}
-                    <div class="body">{{ v[1] }}</div>
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
+          {% assign veins = l[1] %}
+              <h4>{{ l[0] }}</h4> <!-- Employer -->
+              {% for v in veins %}
+                  {% if v[0] == 'title' %}
+                      <div class="title">{{ v[1] }}</div>
+                  {% endif %}
+                  {% if v[0] == 'tenure' %}
+                    {% if n[0] == 'Certifications' %}
+                      <div class="tenure certification">{{ v[1] }}</div>
+                    {% else %}
+                      <div class="tenure">{{ v[1] }}</div>
+                    {% endif %}
+                  {% endif %}
+                  {% if v[0] == 'location' %}
+                    {% if n[0] == 'Education' %}
+                      <div class="location education">{{ v[1] }}</div>
+                    {% else %}
+                      <div class="location">{{ v[1] }}</div>
+                    {% endif %}
+                  {% endif %}
+                  {% if v[0] == 'body' %}
+                      <div class="job-description">{{ v[1] }}</div>
+                  {% endif %}
+                  {% if v[0] == 'major' %}
+                      <div class="job-description">{{ v[1] }}</div>
+                  {% endif %}
+              {% endfor %}
+          {% endfor %}
+        {% endif %}
     {% endif %}
 {% endfor %}
 </div>
