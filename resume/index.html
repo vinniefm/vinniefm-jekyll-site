@@ -118,7 +118,7 @@
     {% if n[0] == 'contact' %}
         {% for l in leafs %}
             {% if l[0] != 'contact' %}
-                <h2>{{ l[1] }}</h2> <!-- name -->
+                <h2 id="me">{{ l[1] }}</h2> <!-- name -->
             {% else %}
                 {% assign veins = l[1] %}
                 <ul class="contacts">
