@@ -1,4 +1,15 @@
 var sticky = new Waypoint.Sticky({
-  element: $('#me')[0]
+  element: $('h3')[0],
+  offset: 20,
+  handler: function(direction){
+    $(this.element).addClass('stuck').siblings().sticky.destroy();
+  }
 });
-sticky();
+// sticky();
+// 
+// $('.meta-contact').waypoint.sticky(function(direction) {
+//   $(this.element).addClass('fixed-element-top');
+// }, {offset: '0'});
+// $('h3').waypoint(function(direction) {
+//   $(this.element).addClass('fixed-element-next').siblings().removeClass('fixed-element-next');
+// }, {offset: '0'});

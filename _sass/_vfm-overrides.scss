@@ -134,4 +134,23 @@
   margin-top: 0;
   }
 }
+.stuck {
+    display: block;
+    background-color: #f1f1f1;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    padding: 1rem 0;
+    border-bottom: 1px solid #red;
+}
+/*.fixed-element-next {
+    background-color: #f1f1f1;
+    position:fixed;
+    top:50;
+    width:100%;
+    z-index:100;
+    padding: 1rem 0;
+    border-bottom: 1px solid #red;
+}*/
 /* End Resume page overrides */
