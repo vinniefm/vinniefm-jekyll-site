@@ -116,19 +116,24 @@
 {% for n in nodes %}
     {% assign leafs = n[1] %}
     {% if n[0] == 'contact' %}
+        
         {% for l in leafs %}
             {% if l[0] != 'contact' %}
+                <div class="meta-contact">
                 <h2>{{ l[1] }}</h2> <!-- name -->
             {% else %}
                 {% assign veins = l[1] %}
-                <ul class="contacts">
-                {% for v in veins %}
-                    <li>{{ v[1] }}</li>
-                {% endfor %}
-                <!-- ^^ Contact methods -->
-                </ul>
+                
+                  <ul class="contacts">
+                  {% for v in veins %}
+                      <li>{{ v[1] }}</li>
+                  {% endfor %}
+                  <!-- ^^ Contact methods -->
+                  </ul>
+                  </div>
             {% endif %}
         {% endfor %}
+        
     {% else %}
       {% if n[0] == 'Executive Summary' %}
         <h3>{{ n[0] }}</h3>
@@ -157,7 +162,7 @@
         </div>
         <!-- sections -->
      {% elsif n[0] != 'Executive Summary' or n[0] != 'Technical Expertise' or n[0] != 'Core Competencies' %}
-        <h3>{{ n[0] }}</h3>
+        <h3 class="professional-experience">{{ n[0] }}</h3>
         {% for l in leafs %}
           {% assign veins = l[1] %}
               <h4>{{ l[0] }}</h4> <!-- Employer -->
