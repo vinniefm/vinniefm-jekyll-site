@@ -129,15 +129,23 @@
 .core-competencies ul:last-of-type {
   margin-top: -15px;
 }
+
+
 @media (min-width: 768px) {
- .core-competencies {
+ .core-competencies,
+ ul.lisa.apis {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   }
   .core-competencies ul:last-of-type {
   margin-top: 0;
   }
+  li.api {
+  flex: 50%;
 }
+}
+
 .stuck-meta-contact {
     background-color: #f1f1f1;
     position:fixed;
