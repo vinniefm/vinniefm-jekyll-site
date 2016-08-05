@@ -169,7 +169,7 @@
                 
                   <ul class="contacts">
                   {% for v in veins %}
-                      <li>{{ v[1] }}</li>
+                      <li {% if v[1] contains "Linkedin" or v[1] contains "UX" %}class="no-print"{% endif %}>{{ v[1] }}</li>
                   {% endfor %}
                   <!-- ^^ Contact methods -->
                   </ul>
