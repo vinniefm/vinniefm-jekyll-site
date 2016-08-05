@@ -205,37 +205,39 @@
           <h3>{{ n[0] }}</h3>
           <p>{{ n[1] }}</p> 
           <!-- sections -->
-     {% elsif n[0] != 'Executive Summary' or n[0] != 'Technical Expertise' or n[0] != 'Core Competencies' %}
-        <h3 class="professional-experience">{{ n[0] }}</h3>
-        {% for l in leafs %}
-          {% assign veins = l[1] %}
-              <h4>{{ l[0] }}</h4> <!-- Employer -->
-              {% for v in veins %}
-                  {% if v[0] == 'title' %}
-                      <div class="title">{{ v[1] }}</div>
-                  {% endif %}
-                  {% if v[0] == 'tenure' %}
-                    {% if n[0] == 'Certifications' %}
-                      <div class="tenure certification">{{ v[1] }}</div>
-                    {% else %}
-                      <div class="tenure">{{ v[1] }}</div>
+        {% elsif n[0] != 'Executive Summary' or n[0] != 'Technical Expertise' or n[0] != 'Core Competencies' %}
+          <h3 class="professional-experience">{{ n[0] }}</h3>
+          {% for l in leafs %}
+            {% assign veins = l[1] %}
+                <h4>{{ l[0] }}</h4> <!-- Employer -->
+                {% for v in veins %}
+                    {% if v[0] == 'tenure' %}
+                      {% if n[0] == 'Certifications' %}
+                        <div class="tenure certification">{{ v[1] }}</div>
+                      {% else %}
+                        <div class="tenure">{{ v[1] }}</div>
+                      {% endif %}
                     {% endif %}
-                  {% endif %}
-                  {% if v[0] == 'location' %}
-                    {% if n[0] == 'Education' %}
-                      <div class="location education">{{ v[1] }}</div>
-                    {% else %}
-                      <div class="location">{{ v[1] }}</div>
+                    <div class="gig-sub">
+                      {% if v[0] == 'title' %}
+                          <div class="title">{{ v[1] }}</div>
+                      {% endif %}
+                      {% if v[0] == 'location' %}
+                        {% if n[0] == 'Education' %}
+                          <div class="location education">{{ v[1] }}</div>
+                        {% else %}
+                          <div class="location">{{ v[1] }}</div>
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                    {% if v[0] == 'body' %}
+                        <div class="job-description">{{ v[1] }}</div>
                     {% endif %}
-                  {% endif %}
-                  {% if v[0] == 'body' %}
-                      <div class="job-description">{{ v[1] }}</div>
-                  {% endif %}
-                  {% if v[0] == 'major' %}
-                      <div class="job-description">{{ v[1] }}</div>
-                  {% endif %}
-              {% endfor %}
-          {% endfor %}
+                    {% if v[0] == 'major' %}
+                        <div class="job-description">{{ v[1] }}</div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
         {% endif %}
     {% endif %}
 {% endfor %}
