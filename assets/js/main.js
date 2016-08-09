@@ -4,6 +4,12 @@ var trackOutboundLink = function(url) {
      'transport': 'beacon'
    });
 }
+var trackFileDownload = function(url) {
+    ga('send', 'event', 'file-download', 'click', url, {
+        'htCallback': function(){document.location = url;},
+        'transport': 'beacon'
+    });
+}
 
 if(screen.width > 1024) {
     var stickyMetaContact = new Waypoint.Sticky({
