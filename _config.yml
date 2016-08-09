@@ -23,3 +23,6 @@ port: 4444
 markdown: kramdown
 # sass:
 #   style: compressed
+
+gems:
+  - jekyll-sitemap
