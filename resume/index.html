@@ -6,9 +6,9 @@
     "contact":
         "name": "Vince Mease"
         "contact":
-            "phone": "<a href=\"tel:+13124800720\">312-480-0720</a>"
-            "email": "<a href=\"mailto:vmease@gmail.com\">vmease@gmail.com</a>"
-            "linkedin": "<a href=\"http://linkedin.com/in/vincemease\" target=\"_blank\">Linkedin</a>"
+            "phone": "<a href=\"tel:+13124800720\" onclick=\x22trackOutboundLink('tel:+13124800720'); return false;\x22>312-480-0720</a>"
+            "email": "<a href=\"mailto:vmease@gmail.com\" onclick=\x22trackOutboundLink('mailto:vmease@gmail.com'); return false;\x22>vmease@gmail.com</a>"
+            "linkedin": "<a href=\"http://linkedin.com/in/vincemease\" target=\"_blank\" onclick=\x22trackOutboundLink('http://linkedin.com/in/vincemease'); return false;\x22>Linkedin</a>"
             "Portfolio": "<a href=\"http://vinniefm.com/portfolio/\" target=\"_blank\">UX Portfolio</a>"
           # "location": "Louisville, KY"
 
@@ -149,7 +149,7 @@
             "location": "Louisville, KY"
 ---
 <div class="resume">
-<a class="pdf-download" target="_blank" href="../../assets/pdf/resume/vince-mease-082016-resume.pdf">Download PDF</a>
+<a class="pdf-download" target="_blank" href="../../assets/pdf/resume/vince-mease-082016-resume.pdf" onclick=\x22trackOutboundLink('http://vinniefm.com/assets/pdf/resume/vince-mease-082016-resume.pdf'); return false;\x22>Download PDF</a>
 {% assign nodes = page.resume %}
 {% for n in nodes %}
     {% assign leafs = n[1] %}
