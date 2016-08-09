@@ -3,3 +3,6 @@ _site
 .jekyll-metadata
 _deploy.yml
 _todos.todo
+_prince-pdf/
+portfolio/_impress-full/
+.DS_Store

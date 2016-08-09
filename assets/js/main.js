@@ -1,3 +1,16 @@
+var trackOutboundLink = function(url) {
+   ga('send', 'event', 'outbound', 'click', url, {
+     'hitCallback': function(){document.location = url;},
+     'transport': 'beacon'
+   });
+}
+// var trackFileDownload = function(url) {
+//     ga('send', 'event', 'file_download', 'click', url, {
+//         'hitCallback': function(){document.location = url;},
+//         'transport': 'beacon'
+//     });
+// }
+
 if(screen.width > 1024) {
     var stickyMetaContact = new Waypoint.Sticky({
       element: $('.meta-contact')[0],

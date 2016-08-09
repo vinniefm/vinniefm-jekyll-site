@@ -29,9 +29,9 @@ div.btn-group {
     <li class="list-group-item">
       <div class="btn-group-wrap">
        <div class="btn-group" role="group" aria-label="Basic example">
-        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" type="button" class="btn btn-secondary"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i> <!-- Linkedin --></a>
-        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" type="button" class="btn btn-secondary"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i> <!-- Twitter --></a>
-        <a href="mailto:vmease@gmail.com" type="button" class="btn btn-secondary"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i> <!-- Email --></a>
+        <a onclick="trackOutboundLink('https://linkedin.com/in/vincemease'); return false;" href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" type="button" class="btn btn-secondary"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i> <!-- Linkedin --></a>
+        <a onclick="trackOutboundLink('https://twitter.com/vinniefm'); return false;" href="https://twitter.com/{{ site.twitter_username }}" target="_blank" type="button" class="btn btn-secondary"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i> <!-- Twitter --></a>
+        <a onclick="trackOutboundLink('mailto:vmease@gmail.com'); return false;" href="mailto:vmease@gmail.com" type="button" class="btn btn-secondary"><i class="fa fa-envelope-square fa-3x" aria-hidden="true"></i> <!-- Email --></a>
 
       </div>
     </div>
