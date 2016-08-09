@@ -1,0 +1,157 @@
+@page {
+    margin: 0.5in !important;
+}
+body {
+  background-color: #ffffff !important;
+  font-size: 10pt !important;
+}
+h2 {
+  font-size: 14pt !important;
+}
+h3 {
+  font-size: 12pt !important;
+  font-weight: 700 !important;
+  margin-top: 1em !important;
+}
+h4 {
+  font-size: 12pt !important;
+  font-weight: 500 !important;
+  margin-top: 1em !important;
+}
+header, footer, nav, nav.navbar,
+.pdf-download, .no-print {
+  display: none !important;
+}
+ul.contacts {
+  margin: -.5em 0 1em 0 !important;
+  padding: .25em 0 !important;
+  border-top: 0.25pt solid #333 !important;
+  border-bottom: 0.25pt solid #333 !important;
+
+}
+ul.contacts li:not(:first-child) {
+  padding-left: .25em !important;
+}
+.title {
+  font-style: italic !important;
+}
+/*.gig-sub {
+  margin-top: -.5em !important;
+  margin-bottom: 1.5em !important;  
+}*/
+.tenure {
+  margin-top: -4.825em !important;
+}
+.location {
+  margin-top: -2.50em !important;
+}
+.certificaiton {
+  margin-top: 4.825em !important;
+}
+.tenure.certification {
+  margin-top: 0 !important;
+}
+.tenure.education {
+  margin-top: -3.825em !important;
+}
+.location.education {
+  margin-top: -2.50em !important;
+}
+.gig-sub {
+  margin-top: -.5em !important;
+  margin-bottom: 1.5em !important;  
+}
+p {
+  margin: .25em auto !important;
+}
+ul.apis, .core-competencies ul {
+  columns: 2 !important;
+  column-gap: 1.75em !important;
+}
+
+
+.resume ul.contacts {
+    display: block;
+    margin: 0 0 1rem 0;
+    padding: .5rem 0 .5rem 0;
+    list-style-type: none;
+    text-align: left;
+    border-bottom: 5px solid #b0b0b0;
+    border-top: 5px solid #b0b0b0;
+    font-size: .9rem;
+    text-align: center;
+}
+.resume ul.contacts li {
+  display: inline;
+}
+.resume ul.contacts li:first-child {
+  display: inline;
+  padding-left: 0;
+  float: left;
+}
+.resume ul.contacts li + li:before {
+  content: '| ';
+  padding-left: .5rem;
+}
+.resume .tenure {
+  float: right;
+  margin-top: -53px;
+}
+.resume .tenure.certification {
+  float: right;
+  margin-top: -30px;
+}
+.resume .location {
+  float: right;
+  margin-top: -24px;
+}
+.resume .job-description {
+  margin: 1rem 0 0 1rem;
+}
+.core-competencies {
+  display: flex;
+  flex-direction: column;
+}
+.core-competencies ul {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.core-competencies ul:last-of-type {
+  margin-top: -15px;
+}
+@media (max-width: 767px) {
+  .resume ul.contacts {
+    font-size: .75rem;
+  }
+  .gig-sub {
+    font-size: .8rem;
+  }
+  .resume .location {
+    margin-top: -19px;
+  }
+  .resume .tenure {
+    font-size: .8rem;
+    margin-top: -44px;
+  } 
+  .post-content h4 {
+    font-size: .85rem;
+  }
+}
+
+
+
+
+.stuck-meta-contact {
+    background-color: #f1f1f1;
+    position:fixed;
+    top:0;
+    float: left;
+    width: inherit;
+    z-index:100;
+    padding: .1rem 0;
+    border-bottom: 1px solid #red;
+}
+
+
+
+/* End Resume page overrides */

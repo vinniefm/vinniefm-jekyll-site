@@ -179,10 +179,6 @@
     border-bottom: 1px solid #red;
 }
 
-@media print {
-    header, footer, li.no-print a {
-      display: none;
-  }
-}
+
 
 /* End Resume page overrides */
