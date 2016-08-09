@@ -78,6 +78,10 @@
 .btn-primary:visited {
   color: #f8f8f8;
 }
+div.project {
+  display: flex;
+  flex-direction: column-reverse;
+}
 
 /* Start Resume page overrides */
 .pdf-download {
