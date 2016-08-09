@@ -5,7 +5,7 @@ var trackOutboundLink = function(url) {
    });
 }
 var trackFileDownload = function(url) {
-    ga('send', 'event', 'file-download', 'click', url, {
+    ga('send', 'event', 'file_download', 'click', url, {
         'hitCallback': function(){document.location = url;},
         'transport': 'beacon'
     });
