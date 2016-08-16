@@ -1,11 +1,23 @@
-function Quiz() {
-  this.questions = [];
+function Quiz(questions) {
+  this.score = 0;
+  this.questions = questions;
   this.currentQuestionIndex = 0;
 
 }
 
-Quiz.prototype.add = function(question) {
-  this.questions.push(question);
+Quiz.prototype.guess = function(answer) {
+  if(this.getCurrentQuestion().isCorrect(answer)) {
+    this.score++;
+  }
+  this.currentQuestionIndex++;
+}
+
+Quiz.prototype.getCurrentQuestion = function(){
+  return this.questions[this.currentQuestionIndex];
+}
+
+Quiz.prototype.hasEnded = function() {
+  return this.currentQuestionIndex >= this.questions.length;
 };
 
 Quiz.prototype.renderInElement = function(list) {
