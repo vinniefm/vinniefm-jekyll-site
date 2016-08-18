@@ -31,7 +31,7 @@ var QuizUI = {
   guessHandler: function(id, guess) {
     var button = document.getElementById(id);
     button.onclick = function() {
-      this.guess(guess);
+      quiz.guess(guess);
       QuizUI.displayNext();
     }
   },
