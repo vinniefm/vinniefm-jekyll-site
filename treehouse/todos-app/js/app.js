@@ -1,3 +1,18 @@
+// [x]Prevent Add on empty task
+// [x]Change "edit" label to "save" when in .editMode
+// [x]Set focus to addTask text input on page load
+// [x]Set focus to addTask text input after task added
+// [x]Set focus, and select all, to editInput field when click on "edit"
+// Keyboard friendly:
+  // [ ]Enter key function on addTask
+  // [ ]Enter key function on editInput
+  // [ ]Tab key function on #new-task focus on addButton
+  // [ ]Enter key function when addButton has focus (after Tab key interaciton above)
+
+
+
+
+
 var taskInput = document.getElementById("new-task");
 var addButton = document.getElementsByTagName("button")[0]; // first button
 var incompleteTasksHolder = document.getElementById("incomplete-tasks");
@@ -34,34 +49,61 @@ var createNewTaskElement = function(taskString) {
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);  
 
+
     return listItem;
+
+
 }
 
 // Add new task
 var addTask = function() {
-  console.log("Add task...");
-
-  // Create new list item with text from #new-task:
-  var listItem = createNewTaskElement(taskInput.value);
-
-  // Append listItem to incompleteTasksHolder;
-  incompleteTasksHolder.appendChild(listItem);
-  bindTaskEvents(listItem, taskCompleted);
+  if(taskInput.value !== ""){
+    console.log("Add task...");
+  
+      // Create new list item with text from #new-task:
+      
+      var listItem = createNewTaskElement(taskInput.value);
+  
+      // Append listItem to incompleteTasksHolder;
+      incompleteTasksHolder.appendChild(listItem);
+      bindTaskEvents(listItem, taskCompleted);
+  
+    taskInput.value = "";
+    taskInput.focus();
+  }
 }
 
 
 // Edit existing task
 var editTask = function() {
   console.log("Edit task...");
+  
 
-  // onclick Edit button
+  var listItem = this.parentNode;
+
+  var editInput = listItem.querySelector("input[type=text]");
+  var editButton = listItem.querySelector("button.edit")
+  var label = listItem.querySelector("label");
+  var containsClass = listItem.classList.contains("editMode");
+
   // if parent has class .editMode
+  if(containsClass) {
     // Switch from .editMode
     // Label text becomes input value
-  // else
+    label.innerText = editInput.value;
+    editButton.innerText = "Edit";
+  } else {
     // Switch to .editMode
     // input value becomes the label's text
-  // Toggle .editMode on the parent   
+    editInput.value = label.innerText;
+    editButton.innerText = "Save";
+    // setFocus;
+  }
+  // Toggle .editMode on the parent and set select() method on editInput when going into .editMode
+  listItem.classList.toggle("editMode");
+  if (!containsClass) {
+    editInput.select();
+  }
 }
 
 
@@ -116,8 +158,13 @@ var bindTaskEvents = function(taskListItem, checkboxEventHandler){
 }
 
 
+// Set focus to #new-task on pageLoad
+taskInput.focus();
+
 // Set the click handler to the addTask function
-addButton.onclick = addTask;
+// addButton.onclick = addTask;
+
+addButton.addEventListener("click", addTask);
 
 
 
