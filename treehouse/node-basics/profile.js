@@ -10,16 +10,26 @@ function printError(error){
   console.error(error.message);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 function get(username){
   var request = http.get('https://teamtreehouse.com/' + username + '.json', function(response){
-    //console.log(response.statusCode);
     var body = "";
-    // Read the data
     response.on('data', function(chunk){
       body += chunk;
     });
     response.on('end', function(){
-      // if(response.statusCode === 200 || response.statusCode === 301) {
         try {
           var profile = JSON.parse(body);
           printMessage(username, profile.badges.length, profile.points.JavaScript);

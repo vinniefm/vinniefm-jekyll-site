@@ -14,4 +14,20 @@ $(document).ready(function() {
     statusHTML += '</ul>';
     $('#employeeList').html(statusHTML);
   }); //end getJSON
+
+  var url="data/rooms.json";
+  $.getJSON(url, function(response){
+    var statusHTML = '<ul class="rooms">';
+    $.each(response, function(index, room){
+      console.log(room.length);
+      if(room.available === true){
+        statusHTML += '<li class="empty">';
+      } else {
+        statusHTML += '<li class="full">';
+      }
+      statusHTML += room.room + '</li>';
+    });
+    statusHTML += '</ul>';
+    $('#rooms').html(statusHTML);
+  }); //end getJSON
 }); // end ready function
